@@ -1,0 +1,7 @@
+streamlit
+pickle
+time
+langchain
+langchain-community-hub
+langchain-community
+python-dotenv
