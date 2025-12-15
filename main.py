@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyDPQbaX0pF_mZZIwF_rYBEsdj4822zE_m0"
+os.environ["GOOGLE_API_KEY"] = ""
 
 # llm = ChatGoogleGenerativeAI(model_name="gemini-2.5-flash", temperature=0.2)
 
