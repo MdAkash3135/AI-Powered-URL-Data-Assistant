@@ -50,11 +50,11 @@ if process_url_clicked:
 
     #data chunkink
     docs = chunk_text(data)
+
+
+    #erite data in a file
     with open(docs_file_path, 'w') as f:
         f.write('\n\n'.join([doc for doc in docs]))
-    print((docs[:20]))
-
-    
 
     mainplacefolder.text("chunking has started .............")
     
@@ -74,11 +74,10 @@ if query:
     if os.path.exists(file_path):
         with open(pickle_file_path, "rb") as f:
             vectorestore = pickle.load(f)
-            # print(vectorestore)
             
             mainplacefolder.text("Vectore store loaded from pickle file.")
             
-            print(query)
+        
             encoded_query = query_embed_chunks(query)
             # print("encoded query ", encoded_query)
 
@@ -88,9 +87,11 @@ if query:
            
 
             mainplacefolder.text("Top matching chunks:")
+
+            
             with open(docs_file_path, 'r') as f:
                 all_chunks = f.read().split("\n\n")
-            print("matching vectors ", matching_vectors)
+
            
 
             for i,c in enumerate(all_chunks):
